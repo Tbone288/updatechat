@@ -21,10 +21,14 @@ public class ChatbotPanel extends JPanel
 	{
 		super();
 		this.baseController = baseController;
-		this.baseLayout = SpringLayout();
+		this.baseLayout = new SpringLayout();
 		chatDisplay = new JTextArea(5, 25);
+		
 		chatField = new JTextField(25);
+		
+		chatField.setBackground(Color.WHITE);
 		chatButton = new JButton("Chat with me");
+		
 		imageLabel = new JLabel(new ImageIcon(getClass().getResource("images/chatbot.png")));
 		
 		setupChatDisplay();
@@ -49,7 +53,7 @@ public class ChatbotPanel extends JPanel
 	private void setupPanel()
 	{
 		this.setLayout(baseLayout);
-		this.setBackground(Color.WHITE);
+		this.setBackground(Color.gray);
 		this.add(chatDisplay);
 		this.add(chatButton);
 		this.add(chatField);
@@ -58,7 +62,12 @@ public class ChatbotPanel extends JPanel
 	
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.WEST, chatDisplay, 106, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, chatField, 0, SpringLayout.WEST, chatDisplay);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatField, -32, SpringLayout.NORTH, chatDisplay);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatDisplay, -33, SpringLayout.NORTH, chatButton);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -43, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, chatButton, -198, SpringLayout.EAST, this);
 	}
 	
 	private void setupListeners()
