@@ -10,7 +10,7 @@ public class ChatViewer
 	public ChatViewer()
 	{
 		windowMessage = "This is a message that does nothing!";
-		chatIcon = new ImageIcon(getClass().getResource("images/chatbot.png"));
+		//chatIcon = new ImageIcon(getClass().getResource("images/chatbot.png"));
 	}
 	
 	public String collectResponse(String question)
