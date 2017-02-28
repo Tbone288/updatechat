@@ -15,11 +15,11 @@ public class ChatbotPanel extends JPanel
 	private JTextArea chatDisplay;
 	private JTextField chatField;
 	private JButton chatButton;
-	private JButton browseTwitter;
+	private JButton postTwitter;
 	private JButton saveFile;
 	private JButton loadFile;
 	private JButton searchTwitter;
-	private JLabel imageLabel;
+//	private JLabel imageLabel;
 	private JScrollPane chatPane;
 	
 	public ChatbotPanel(ChatController baseController)
@@ -32,6 +32,10 @@ public class ChatbotPanel extends JPanel
 		chatField = new JTextField(25);
 		chatField.setBackground(Color.WHITE);
 		chatButton = new JButton("Chat with me");
+		postTwitter = new JButton("Post to Twitter");
+		saveFile = new JButton("Save");
+		loadFile = new JButton("Load");
+		searchTwitter = new JButton("Search Twitter");
 		chatPane = new JScrollPane();
 		//imageLabel = new JLabel(new ImageIcon(getClass().getResource("images/chatbot.png")));
 		
@@ -57,6 +61,10 @@ public class ChatbotPanel extends JPanel
 		this.setLayout(baseLayout);
 		//this.add(chatDisplay);
 		this.add(chatButton);
+		this.add(loadFile);
+		this.add(saveFile);
+		this.add(searchTwitter);
+		this.add(postTwitter);
 		this.add(chatField);
 		this.add(chatPane);
 	}
