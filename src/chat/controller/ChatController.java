@@ -24,7 +24,7 @@ public class ChatController
 //				
 //		while(stupidBot.lengthChecker(response))
 //		{
-//			chatView.displayMessage(useChatbotCheckers(response));
+//			chatView.ChatViewMessage(useChatbotCheckers(response));
 //			response = chatView.collectResponse("Oh, you are interested in " + response);
 //		}
 	}
@@ -96,6 +96,18 @@ public class ChatController
 		return randomTopic;
 		
 	}
+	
+	public void handleErrors(Exception currentException)
+	{
+		chatView.displayMessage("An error has occured. Details provided next.");
+		chatView.displayMessage(currentException.getMessage());
+	}
+	
+	public ChatViewer getPopup()
+	{
+		return chatView;
+	}
+	
 	public Object getBaseFrame()
 	{
 		return baseFrame;
