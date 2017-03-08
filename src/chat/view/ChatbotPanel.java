@@ -115,7 +115,6 @@ public class ChatbotPanel extends JPanel
 					chatField.setText("");
 					
 					chatDisplay.setText(oldText + "\nYou said: " + userWords + "\n" + "Chatbot said: " + botResponse); 
-					
 					chatDisplay.setCaretPosition(chatDisplay.getCaretPosition());
 				}
 			});

@@ -1,6 +1,7 @@
 package chat.controller;
 
 import chat.model.Chatbot;
+import chat.model.CtecTwitter;
 import chat.view.ChatViewer;
 import chat.view.ChatFrame;
 
@@ -9,13 +10,16 @@ public class ChatController
 	private Chatbot stupidBot;
 	private ChatViewer chatView;
 	private ChatFrame baseFrame;
+	private CtecTwitter tweetBot;
 	
 	
 	public ChatController()
 	{
 		stupidBot = new Chatbot("Boaty McBoatFace");
+		tweetBot = new CtecTwitter(this);
 		baseFrame = new ChatFrame(this);
 		chatView = new ChatViewer();
+	
 	}
 	
 	public void start()
@@ -115,5 +119,10 @@ public class ChatController
 	public Chatbot getChatbot()
 	{
 		return stupidBot;
+	}
+	
+	public void useTwitter(String text)
+	{
+		
 	}
 }
