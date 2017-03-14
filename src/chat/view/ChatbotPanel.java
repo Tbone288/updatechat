@@ -139,6 +139,24 @@ public class ChatbotPanel extends JPanel
 			chatDisplay.setText(saved);
 		}
 			});
-}
+
+	
+	postTwitter.addActionListener(new ActionListener()
+	{
+		public void actionPerformed(ActionEvent click)
+		{
+			
+		}
+	});
+	
+	searchTwitter.addActionListener(new ActionListener()
+	{
+		public void actionPerformed(ActionEvent click)
+		{
+			String username = chatField.getText();
+			chatDisplay.append(baseController.searchTwitter(username));
+		}
+	});
+	
 }
 
