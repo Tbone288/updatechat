@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import chat.controller.ChatController;
 import chat.controller.FileController;
-
 import javax.swing.SpringLayout;
 
 public class ChatbotPanel extends JPanel
@@ -117,7 +116,7 @@ public class ChatbotPanel extends JPanel
 					chatDisplay.setText(oldText + "\nYou said: " + userWords + "\n" + "Chatbot said: " + botResponse); 
 					chatDisplay.setCaretPosition(chatDisplay.getCaretPosition());
 				}
-			});
+	});
 	
 	
 	saveFile.addActionListener(new ActionListener()
@@ -157,6 +156,9 @@ public class ChatbotPanel extends JPanel
 			chatDisplay.append(baseController.searchTwitter(username));
 		}
 	});
+	
+
+	}
 	
 }
 

@@ -66,7 +66,7 @@ public class CtecTwitter
 		
 	}
 	
-	private void removeBoringWords(Œ)
+	private void removeBoringWords()
 	{
 		String [] boringWords = createIgnoredWordsArray();
 		
